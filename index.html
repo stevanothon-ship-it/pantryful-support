@@ -32,51 +32,110 @@
     border-radius: .6rem;
   }
   .version { font-size: .875rem; color: #78716c; }
+  .shots {
+    display: flex;
+    gap: .75rem;
+    overflow-x: auto;
+    padding: .25rem 0 1rem;
+    margin: 1rem -1.25rem 0;
+    padding-left: 1.25rem;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .shots img {
+    flex: 0 0 auto;
+    width: 15.5rem;
+    height: auto;
+    border-radius: 1rem;
+    scroll-snap-align: start;
+    box-shadow: 0 6px 20px rgba(60, 40, 20, .12);
+  }
+  .shots img:last-child { margin-right: 1.25rem; }
+  .hint { font-size: .85rem; color: #78716c; margin-top: 0; }
   @media (prefers-color-scheme: dark) {
     body { color: #e7e5e4; background: #1c1917; }
     .lede { color: #d6d3d1; }
-    footer, .version { color: #a8a29e; }
+    footer, .version, .hint { color: #a8a29e; }
     a { color: #fb923c; }
     hr { border-top-color: #292524; }
     .contact { background: #262220; border-color: #3a3330; }
+    .shots img { box-shadow: 0 6px 20px rgba(0, 0, 0, .5); }
   }
 </style>
 </head>
 <body>
 
 <h1>Pantryful Support</h1>
-<p class="lede">A recipe box that knows what's in your kitchen.</p>
+<p class="lede">The recipe box that knows what's in your kitchen — and the whole household's kitchen.</p>
 <p><a href="https://apps.apple.com/app/id6796898711">Get Pantryful on the App Store</a></p>
+
+<div class="shots" aria-label="Pantryful screenshots">
+  <img src="screenshots/01-cook-tonight.jpg" width="660" height="1434" loading="eager" alt="Cook Tonight: recipes ranked by what's already in your kitchen">
+  <img src="screenshots/02-pantry.jpg" width="660" height="1434" loading="lazy" alt="Pantry with best-before dates and a use-it-up list">
+  <img src="screenshots/03-week.jpg" width="660" height="1434" loading="lazy" alt="This Week planner with one tap to add everything to the shopping list">
+  <img src="screenshots/04-receipt.jpg" width="660" height="1434" loading="lazy" alt="Receipt scan filing groceries onto the right pantry shelves">
+  <img src="screenshots/05-recipe-box.jpg" width="660" height="1434" loading="lazy" alt="Recipe Box with star ratings">
+  <img src="screenshots/06-cooked.jpg" width="660" height="1434" loading="lazy" alt="After cooking, what you used comes off the shelves automatically">
+  <img src="screenshots/07-cook-mode-island.jpg" width="660" height="1434" loading="lazy" alt="Step-by-step cook mode with the timer in the Dynamic Island">
+  <img src="screenshots/08-review.jpg" width="660" height="1434" loading="lazy" alt="Rate a recipe and jot a note for next time">
+  <img src="screenshots/09-shopping-list.jpg" width="660" height="1434" loading="lazy" alt="Shopping list grouped by the recipe that needs each item">
+  <img src="screenshots/10-recipe-detail.jpg" width="660" height="1434" loading="lazy" alt="Recipe detail with serving scaling and unit conversion">
+</div>
+<p class="hint">Swipe or scroll for more.</p>
 
 <h2>Getting started</h2>
 
-<h3>Saving a recipe from the web</h3>
-<p>Open the <strong>Recipe Box</strong> tab, tap <strong>+</strong> in the top corner, and choose
-<strong>Import from a link</strong>. Paste the address of a recipe page and Pantryful reads the
-ingredients, steps, timing, and servings from it.</p>
-
-<h3>Writing your own</h3>
-<p>Same <strong>+</strong> button, then <strong>Write it myself</strong>. Add ingredients and
-steps one line at a time. You can reorder or delete lines, and edit the recipe again at any point.</p>
+<h3>Saving a recipe</h3>
+<p>Open the <strong>Recipe Box</strong> tab and tap <strong>+</strong>. Paste a link and Pantryful reads
+the ingredients, steps, timing and servings from the page. You can also share a page to Pantryful
+from Safari, paste the plain text of a recipe from a message, or photograph a cookbook page — several
+pages, if the recipe runs long. Or choose <strong>Write it myself</strong> and type it in.</p>
 
 <h3>Filling the pantry</h3>
-<p>Use the <strong>Scan</strong> tab to read a grocery barcode and have the name, brand, and size
-filled in for you, or add items by hand from the <strong>Pantry</strong> tab. Once the pantry has
-something in it, the <strong>Cook</strong> tab ranks your recipes by how close you are to being
-able to make them.</p>
+<p>From the <strong>Pantry</strong> tab, tap <strong>+</strong> and choose <strong>Scan a receipt</strong>
+to photograph a grocery receipt: every food line files itself on the right shelf, and anything you
+already have is topped up. Single items can be scanned by barcode or added by hand. Give perishables a
+best-before date and the <strong>Use it up</strong> list at the top of the pantry keeps an eye on them.</p>
+
+<h3>What can I cook tonight?</h3>
+<p>The <strong>Cook</strong> tab ranks your recipes by how close you are to being able to make them,
+and moves recipes that use up something about to expire to the top. A dish that needs one thing tells
+you which thing and puts it on the list with a tap. You can also ask Siri:
+<em>"What can I cook tonight in Pantryful?"</em></p>
+
+<h3>Planning the week</h3>
+<p>The <strong>Week</strong> tab is a seven-day board. Put recipes on days and Pantryful works out
+everything the week needs that your pantry doesn't have. One tap adds it all to the shopping list.</p>
+
+<h3>Cooking</h3>
+<p>Open a recipe and tap <strong>Cook step by step</strong>. Steps with a time in them get a timer that
+keeps counting on the Lock Screen and in the Dynamic Island. When you're done, tap
+<strong>I made this</strong>: what you used comes off the pantry shelves, and you can rate the recipe and
+leave yourself a note for next time.</p>
+
+<h3>Sharing a kitchen</h3>
+<p>Open <strong>Settings</strong> (the gear on the Recipe Box) and turn on <strong>Sync with iCloud</strong>.
+Your recipes, pantry, list and plan stay the same on every device signed into your iCloud account.
+Pantryful Plus members can invite other people to the household, so everyone works from one pantry
+and one list.</p>
 
 <h2>Common questions</h2>
 
 <h3>A link wouldn't import. What now?</h3>
 <p>Some sites block automated readers, and a few publish their recipes in a format Pantryful can't
-read. When that happens the import fails rather than saving something half-finished. You can still
-add the recipe with <strong>Write it myself</strong>. If a site you use often doesn't work, tell us
-which one — that's useful information.</p>
+read. When that happens the import fails rather than saving something half-finished. Try copying the
+recipe text and pasting it into the import box instead, photograph the page, or add it with
+<strong>Write it myself</strong>. If a site you use often doesn't work, tell us which one.</p>
 
-<h3>The Scan tab says it can't use the camera.</h3>
-<p>Pantryful needs camera permission to read barcodes. Open the iOS <strong>Settings</strong> app,
-scroll to <strong>Pantryful</strong>, and turn <strong>Camera</strong> on. Nothing else in the app
-needs the camera, and you can add pantry items by hand instead.</p>
+<h3>The scanner says it can't use the camera.</h3>
+<p>Pantryful needs camera permission to read barcodes, receipts and cookbook pages. Open the iOS
+<strong>Settings</strong> app, scroll to <strong>Pantryful</strong>, and turn <strong>Camera</strong> on.
+You can also choose a photo from your library instead of using the camera.</p>
+
+<h3>The receipt scan missed something, or got a name wrong.</h3>
+<p>Receipts are read on your iPhone, and abbreviations like "ORG SPNCH 200G" don't always come out
+right. On the <strong>Check the receipt</strong> screen, tap a name to fix it, untick anything that
+isn't food, and adjust the count before adding. Nothing is uploaded anywhere.</p>
 
 <h3>A barcode came back as "not found".</h3>
 <p>Product details come from Open Food Facts, a community database. Its coverage is very good for
@@ -93,18 +152,31 @@ would use usually fixes it. Brand names don't interfere with matching.</p>
 Pantryful converts dry goods by weight rather than treating every ingredient as a liquid. The
 <strong>Original</strong> setting always shows the recipe exactly as it was written.</p>
 
+<h3>Sync is on but my other device doesn't show the same things.</h3>
+<p>Both devices need to be signed into the same iCloud account, with iCloud Drive turned on for
+Pantryful (iOS <strong>Settings</strong>, your name, <strong>iCloud</strong>, <strong>Apps Using
+iCloud</strong>). Changes usually arrive within a few seconds of opening the app. If you were invited
+to someone else's household, accept the invitation link on each device you want in it.</p>
+
+<h3>The Siri phrase doesn't work.</h3>
+<p>Siri learns the phrases the first time the app runs after installing. Open Pantryful once, then try
+<em>"What can I cook tonight in Pantryful?"</em> or <em>"Add to my Pantryful list"</em>. The Cook Tonight
+widget is added from the Home Screen widget gallery, like any other widget.</p>
+
 <h3>Do I need an account or a subscription?</h3>
-<p>No. Pantryful has neither. There's nothing to sign up for and nothing to renew.</p>
+<p>No account. Pantryful is free, and the free recipe box holds up to 10 of your own recipes. Pantryful
+Plus removes that limit and lets you invite others to your household. Everything else — pantry matching,
+scanning, planning, cook mode and the shopping list — is included either way.</p>
 
 <h3>Where is my data, and how do I back it up?</h3>
-<p>Everything is stored on your iPhone, in the app's own storage. It is included in your device's
-iCloud or iTunes backup, so restoring a backup to a new phone brings your recipes with it. Deleting
-the app deletes its data. See the <a href="privacy.html">privacy policy</a> for the full
-detail.</p>
+<p>Everything is stored on your device, and in your own private iCloud if sync is on. It is included in
+your device backup, so restoring a backup to a new phone brings your recipes with it. See the
+<a href="privacy.html">privacy policy</a> for the full detail.</p>
 
 <h3>How do I delete everything?</h3>
 <p>Delete individual recipes and pantry items inside the app, or remove the app from your iPhone to
-delete all of it at once. No copy is kept anywhere else.</p>
+delete all of it at once. If sync was on, turning it off in Settings and removing the app clears the
+iCloud copy as well.</p>
 
 <h2>Reporting a problem</h2>
 <p>If something is broken or a site won't import, the details that help most are:</p>
@@ -112,7 +184,7 @@ delete all of it at once. No copy is kept anywhere else.</p>
   <li>What you were doing when it happened</li>
   <li>The recipe link, if it was an import that failed</li>
   <li>Your iPhone model and iOS version</li>
-  <li>The Pantryful version, from the App Store listing</li>
+  <li>The Pantryful version, from Settings inside the app</li>
 </ul>
 
 <div class="contact">
@@ -125,7 +197,7 @@ delete all of it at once. No copy is kept anywhere else.</p>
 
 <hr>
 <footer>
-  <p class="version">Pantryful 1.0 &nbsp;·&nbsp; <a href="privacy.html">Privacy policy</a></p>
+  <p class="version">Pantryful 1.5 &nbsp;·&nbsp; <a href="privacy.html">Privacy policy</a></p>
   <p>Pantryful is an independent app. Open Food Facts is a separate service, and recipe websites are
   operated by their own publishers; neither is affiliated with Pantryful.</p>
 </footer>
